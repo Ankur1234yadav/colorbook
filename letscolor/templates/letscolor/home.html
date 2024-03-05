@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <style>
+        .carousel-item img{
+    object-fit: cover;
+    @media only screen and (min-width: 601px) {height: 650px;}
+    @media only screen and (max-width: 600px) {height: 300px;}
+  }
+  .carousel-inner .carousel-caption  {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      /* width: 100%; */
+      padding: 20px;
+  }
+    </style>
+
+</head>
+<body class="" style="background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);">
+    {% include 'letscolor/navbar.html' %}
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="https://cf.ltkcdn.net/kids/images/orig/306411-1600x1066-color-theory-kids.jpg" class="d-block w-100" alt="..." >
+                <div class="carousel-caption  d-md-block ">
+                    <h3>Coloring is like a magic wand that brings imagination to life on a piece of paper.</h3>
+                    <!-- <p></p> -->
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://www.lettering-daily.com/wp-content/uploads/2018/06/Home-page-new-1-of-1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption  d-md-block">
+                    <h3>Coloring is not just about filling in spaces, it's about filling the world with joy and creativity</h3>
+                    <!-- <p></p> -->
+                </div>
+            </div>
+             <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://cdn-az.allevents.in/events2/banners/2e9744c42c8b8058ec271dfba10e8001f429bbb11a38c2d20a3bac431b67f376-rimg-w960-h540-gmir.jpg?v=1708796351" class="d-block w-100" alt="..." >
+                <div class="carousel-caption  d-md-block">
+                    <h3>Life is like a coloring book, and every day is a new page waiting to be filled with vibrant colors.</h3>
+                     <p></p> 
+                </div>
+            </div> 
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+
+
+     <!-- carousel ends here -->
+<section class="bg-gradient ">
+    <div class="container text-center mb-4">
+        <h3 class="alert alert-primary display-4 text-info ">Let's Color</h3>
+    </div>
+<br>
+<br>    
+<br> 
+    <div class="container color-book"><a class="color-book__text " href="http://127.0.0.1:8000/coloring/">Paint Here!</a></div>
+<br>
+<br>
+<br>
+    <div class="container text-center mb-4">
+        <div class="alert alert-secondary display-4 text-info">    
+            <p>New to <span class="dangan">Color Book</span>? <p>
+        </div>
+    
+    </div>
+<br>
+<br>
+
+    <div id="about" class="toFadeIn">
+
+        <div class="container text-center about-gallery">
+            <p>About This Coloring Book</p>
+        </div>
+
+        <div class="about-summary">
+            <p>"Color Book is a website in which kids can color the images online.</p>
+            <p>The app was made as a project, using HTML, CSS, JavaScript, and jQuery.</p>
+            <p>Using this app, a user can drag a mouse across a canvas to make free-form lines.</p>
+            <p class="italicized">Compatible with desktop. Not compatible with mobile devices at this time. 
+                The app works in browsers compatible with Windows. Apple users, let me know if it works for you, too!</p>
+        </div>
+
+    </div>
+
+    <div class="concave toFadeIn">
+        <div class="what-else-header">
+            <div>
+                <br/>
+                <p>What Else Can This App Do?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="what-else toFadeIn">
+        <div class="what-else-list">
+            <ul>
+                <li>Paint with a color with an opacity of their choice</li>
+                <li>Use a dropper to select a color on screen</li>
+                <li>Change the pen size</li>
+                <li>Use an eraser</li>
+                <li>Download painting</li>
+                <li>Destroy painting (with no <span class="hope">hope</span> of recovery)</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+</section>
+{% include 'letscolor/footer.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
